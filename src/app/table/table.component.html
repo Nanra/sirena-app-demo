@@ -49,11 +49,15 @@
           </td>
 
           <td>
-              <form [formGroup]="initForm">
-                  <select class="form-control" formControlName="kecamatanControl">
-                    <option [value]="kct" *ngFor="let kct of kecamatan">{{kct}}</option>
-                  </select>
-                </form>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="kecamatanControl">
+                <option [value]="kct" *ngFor="let kct of kecamatan">{{kct}}</option>
+            </select>
+            <span>
+                <button (click)="onSelected()" class="btn btn-sm"> <i class="fa fa-search"></i></button>
+            </span>
+
+            </form>
           </td>
           <td>{{rtrwn}}</td>
           <td>{{rtrksn}}</td>
@@ -63,360 +67,387 @@
         </tr>
 
         <tr>
-            <th scope="row">2</th>
-            <td><input class="form-control" type="text"></td>
-            <td>
-              <form [formGroup]="initForm">
-                <select class="form-control" formControlName="jpControl">
-                  <option [value]="jp" *ngFor="let jp of jenisProgram">{{jp}}</option>
-                </select>
-              </form>
-            </td>
-            <td>
-              <form [formGroup]="initForm">
-                <select class="form-control" formControlName="provinsiControl">
-                  <option [value]="prv" *ngFor="let prv of provinsi">{{prv}}</option>
-                </select>
-              </form>
-            </td>
-            <td>
-              <form [formGroup]="initForm">
-                <select class="form-control" formControlName="kabKotaControl">
-                  <option [value]="kbk" *ngFor="let kbk of kabKota">{{kbk}}</option>
-                </select>
-              </form>
-            </td>
+          <th scope="row">2</th>
+          <td><input class="form-control" type="text"></td>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="jpControl2">
+                <option [value]="jp" *ngFor="let jp of jenisProgram">{{jp}}</option>
+              </select>
+            </form>
+          </td>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="provinsiControl">
+                <option [value]="prv" *ngFor="let prv of provinsi">{{prv}}</option>
+              </select>
+            </form>
+          </td>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="kabKotaControl">
+                <option [value]="kbk" *ngFor="let kbk of kabKota">{{kbk}}</option>
+              </select>
+            </form>
+          </td>
 
-            <td>
-                <form [formGroup]="initForm">
-                    <select class="form-control" formControlName="kecamatanControl">
-                      <option [value]="kct" *ngFor="let kct of kecamatan">{{kct}}</option>
-                    </select>
-                  </form>
-            </td>
-            <td>{{rtrwn2}}</td>
-            <td>{{rtrksn2}}</td>
-            <td>{{rtrwpulau2}}</td>
-            <td>{{rtrwprovinsi2}}</td>
-            <td>{{rtrwkota2}}</td>
-          </tr>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="kecamatanControl2">
+                <option [value]="kct" *ngFor="let kct of kecamatan">{{kct}}</option>
+              </select>
+              <span>
+                  <button (click)="onSelected2()" class="btn btn-sm"> <i class="fa fa-search"></i></button>
+              </span>
+            </form>
+          </td>
+          <td>{{rtrwn2}}</td>
+          <td>{{rtrksn2}}</td>
+          <td>{{rtrwpulau2}}</td>
+          <td>{{rtrwprovinsi2}}</td>
+          <td>{{rtrwkota2}}</td>
+        </tr>
 
-          <tr>
-              <th scope="row">3</th>
-              <td><input class="form-control" type="text"></td>
-              <td>
-                <form [formGroup]="initForm">
-                  <select class="form-control" formControlName="jpControl">
-                    <option [value]="jp" *ngFor="let jp of jenisProgram">{{jp}}</option>
-                  </select>
-                </form>
-              </td>
-              <td>
-                <form [formGroup]="initForm">
-                  <select class="form-control" formControlName="provinsiControl">
-                    <option [value]="prv" *ngFor="let prv of provinsi">{{prv}}</option>
-                  </select>
-                </form>
-              </td>
-              <td>
-                <form [formGroup]="initForm">
-                  <select class="form-control" formControlName="kabKotaControl">
-                    <option [value]="kbk" *ngFor="let kbk of kabKota">{{kbk}}</option>
-                  </select>
-                </form>
-              </td>
+        <tr>
+          <th scope="row">3</th>
+          <td><input class="form-control" type="text"></td>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="jpControl3">
+                <option [value]="jp" *ngFor="let jp of jenisProgram">{{jp}}</option>
+              </select>
+            </form>
+          </td>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="provinsiControl">
+                <option [value]="prv" *ngFor="let prv of provinsi">{{prv}}</option>
+              </select>
+            </form>
+          </td>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="kabKotaControl">
+                <option [value]="kbk" *ngFor="let kbk of kabKota">{{kbk}}</option>
+              </select>
+            </form>
+          </td>
 
-              <td>
-                  <form [formGroup]="initForm">
-                      <select class="form-control" formControlName="kecamatanControl">
-                        <option [value]="kct" *ngFor="let kct of kecamatan">{{kct}}</option>
-                      </select>
-                    </form>
-              </td>
-              <td>{{rtrwn3}}</td>
-              <td>{{rtrksn3}}</td>
-              <td>{{rtrwpulau3}}</td>
-              <td>{{rtrwprovinsi3}}</td>
-              <td>{{rtrwkota3}}</td>
-            </tr>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="kecamatanControl3">
+                <option [value]="kct" *ngFor="let kct of kecamatan">{{kct}}</option>
+              </select>
+              <span>
+                  <button (click)="onSelected3()" class="btn btn-sm"> <i class="fa fa-search"></i></button>
+              </span>
+            </form>
+          </td>
+          <td>{{rtrwn3}}</td>
+          <td>{{rtrksn3}}</td>
+          <td>{{rtrwpulau3}}</td>
+          <td>{{rtrwprovinsi3}}</td>
+          <td>{{rtrwkota3}}</td>
+        </tr>
 
-            <tr>
-                <th scope="row">4</th>
-                <td><input class="form-control" type="text"></td>
-                <td>
-                  <form [formGroup]="initForm">
-                    <select class="form-control" formControlName="jpControl">
-                      <option [value]="jp" *ngFor="let jp of jenisProgram">{{jp}}</option>
-                    </select>
-                  </form>
-                </td>
-                <td>
-                  <form [formGroup]="initForm">
-                    <select class="form-control" formControlName="provinsiControl">
-                      <option [value]="prv" *ngFor="let prv of provinsi">{{prv}}</option>
-                    </select>
-                  </form>
-                </td>
-                <td>
-                  <form [formGroup]="initForm">
-                    <select class="form-control" formControlName="kabKotaControl">
-                      <option [value]="kbk" *ngFor="let kbk of kabKota">{{kbk}}</option>
-                    </select>
-                  </form>
-                </td>
+        <tr>
+          <th scope="row">4</th>
+          <td><input class="form-control" type="text"></td>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="jpControl4">
+                <option [value]="jp" *ngFor="let jp of jenisProgram">{{jp}}</option>
+              </select>
+            </form>
+          </td>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="provinsiControl">
+                <option [value]="prv" *ngFor="let prv of provinsi">{{prv}}</option>
+              </select>
+            </form>
+          </td>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="kabKotaControl">
+                <option [value]="kbk" *ngFor="let kbk of kabKota">{{kbk}}</option>
+              </select>
+            </form>
+          </td>
 
-                <td>
-                    <form [formGroup]="initForm">
-                        <select class="form-control" formControlName="kecamatanControl">
-                          <option [value]="kct" *ngFor="let kct of kecamatan">{{kct}}</option>
-                        </select>
-                      </form>
-                </td>
-                <td>{{rtrwn4}}</td>
-                <td>{{rtrksn4}}</td>
-                <td>{{rtrwpulau4}}</td>
-                <td>{{rtrwprovinsi4}}</td>
-                <td>{{rtrwkota4}}</td>
-              </tr>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="kecamatanControl4">
+                <option [value]="kct" *ngFor="let kct of kecamatan">{{kct}}</option>
+              </select>
+              <span>
+                  <button (click)="onSelected4()" class="btn btn-sm"> <i class="fa fa-search"></i></button>
+              </span>
+            </form>
+          </td>
+          <td>{{rtrwn4}}</td>
+          <td>{{rtrksn4}}</td>
+          <td>{{rtrwpulau4}}</td>
+          <td>{{rtrwprovinsi4}}</td>
+          <td>{{rtrwkota4}}</td>
+        </tr>
 
-              <tr>
-                  <th scope="row">5</th>
-                  <td><input class="form-control" type="text"></td>
-                  <td>
-                    <form [formGroup]="initForm">
-                      <select class="form-control" formControlName="jpControl">
-                        <option [value]="jp" *ngFor="let jp of jenisProgram">{{jp}}</option>
-                      </select>
-                    </form>
-                  </td>
-                  <td>
-                    <form [formGroup]="initForm">
-                      <select class="form-control" formControlName="provinsiControl">
-                        <option [value]="prv" *ngFor="let prv of provinsi">{{prv}}</option>
-                      </select>
-                    </form>
-                  </td>
-                  <td>
-                    <form [formGroup]="initForm">
-                      <select class="form-control" formControlName="kabKotaControl">
-                        <option [value]="kbk" *ngFor="let kbk of kabKota">{{kbk}}</option>
-                      </select>
-                    </form>
-                  </td>
+        <tr>
+          <th scope="row">5</th>
+          <td><input class="form-control" type="text"></td>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="jpControl5">
+                <option [value]="jp" *ngFor="let jp of jenisProgram">{{jp}}</option>
+              </select>
+            </form>
+          </td>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="provinsiControl">
+                <option [value]="prv" *ngFor="let prv of provinsi">{{prv}}</option>
+              </select>
+            </form>
+          </td>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="kabKotaControl">
+                <option [value]="kbk" *ngFor="let kbk of kabKota">{{kbk}}</option>
+              </select>
+            </form>
+          </td>
 
-                  <td>
-                      <form [formGroup]="initForm">
-                          <select class="form-control" formControlName="kecamatanControl">
-                            <option [value]="kct" *ngFor="let kct of kecamatan">{{kct}}</option>
-                          </select>
-                        </form>
-                  </td>
-                  <td>{{rtrwn5}}</td>
-                  <td>{{rtrksn5}}</td>
-                  <td>{{rtrwpulau5}}</td>
-                  <td>{{rtrwprovinsi5}}</td>
-                  <td>{{rtrwkota5}}</td>
-                </tr>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="kecamatanControl5">
+                <option [value]="kct" *ngFor="let kct of kecamatan">{{kct}}</option>
+              </select>
+              <span>
+                  <button (click)="onSelected5()" class="btn btn-sm"> <i class="fa fa-search"></i></button>
+              </span>
+            </form>
+          </td>
+          <td>{{rtrwn5}}</td>
+          <td>{{rtrksn5}}</td>
+          <td>{{rtrwpulau5}}</td>
+          <td>{{rtrwprovinsi5}}</td>
+          <td>{{rtrwkota5}}</td>
+        </tr>
 
-                <tr>
-                    <th scope="row">6</th>
-                    <td><input class="form-control" type="text"></td>
-                    <td>
-                      <form [formGroup]="initForm">
-                        <select class="form-control" formControlName="jpControl">
-                          <option [value]="jp" *ngFor="let jp of jenisProgram">{{jp}}</option>
-                        </select>
-                      </form>
-                    </td>
-                    <td>
-                      <form [formGroup]="initForm">
-                        <select class="form-control" formControlName="provinsiControl">
-                          <option [value]="prv" *ngFor="let prv of provinsi">{{prv}}</option>
-                        </select>
-                      </form>
-                    </td>
-                    <td>
-                      <form [formGroup]="initForm">
-                        <select class="form-control" formControlName="kabKotaControl">
-                          <option [value]="kbk" *ngFor="let kbk of kabKota">{{kbk}}</option>
-                        </select>
-                      </form>
-                    </td>
+        <tr>
+          <th scope="row">6</th>
+          <td><input class="form-control" type="text"></td>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="jpControl">
+                <option [value]="jp" *ngFor="let jp of jenisProgram">{{jp}}</option>
+              </select>
+            </form>
+          </td>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="provinsiControl">
+                <option [value]="prv" *ngFor="let prv of provinsi">{{prv}}</option>
+              </select>
+            </form>
+          </td>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="kabKotaControl">
+                <option [value]="kbk" *ngFor="let kbk of kabKota">{{kbk}}</option>
+              </select>
+            </form>
+          </td>
 
-                    <td>
-                        <form [formGroup]="initForm">
-                            <select class="form-control" formControlName="kecamatanControl">
-                              <option [value]="kct" *ngFor="let kct of kecamatan">{{kct}}</option>
-                            </select>
-                          </form>
-                    </td>
-                    <td>{{rtrwn6}}</td>
-                    <td>{{rtrksn6}}</td>
-                    <td>{{rtrwpulau6}}</td>
-                    <td>{{rtrwprovinsi6}}</td>
-                    <td>{{rtrwkota6}}</td>
-                  </tr>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="kecamatanControl">
+                <option [value]="kct" *ngFor="let kct of kecamatan">{{kct}}</option>
+              </select>
+              <span>
+                  <button (click)="onSelected6()" class="btn btn-sm"> <i class="fa fa-search"></i></button>
+              </span>
+            </form>
+          </td>
+          <td>{{rtrwn6}}</td>
+          <td>{{rtrksn6}}</td>
+          <td>{{rtrwpulau6}}</td>
+          <td>{{rtrwprovinsi6}}</td>
+          <td>{{rtrwkota6}}</td>
+        </tr>
 
-                  <tr>
-                      <th scope="row">7</th>
-                      <td><input class="form-control" type="text"></td>
-                      <td>
-                        <form [formGroup]="initForm">
-                          <select class="form-control" formControlName="jpControl">
-                            <option [value]="jp" *ngFor="let jp of jenisProgram">{{jp}}</option>
-                          </select>
-                        </form>
-                      </td>
-                      <td>
-                        <form [formGroup]="initForm">
-                          <select class="form-control" formControlName="provinsiControl">
-                            <option [value]="prv" *ngFor="let prv of provinsi">{{prv}}</option>
-                          </select>
-                        </form>
-                      </td>
-                      <td>
-                        <form [formGroup]="initForm">
-                          <select class="form-control" formControlName="kabKotaControl">
-                            <option [value]="kbk" *ngFor="let kbk of kabKota">{{kbk}}</option>
-                          </select>
-                        </form>
-                      </td>
+        <tr>
+          <th scope="row">7</th>
+          <td><input class="form-control" type="text"></td>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="jpControl">
+                <option [value]="jp" *ngFor="let jp of jenisProgram">{{jp}}</option>
+              </select>
+            </form>
+          </td>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="provinsiControl">
+                <option [value]="prv" *ngFor="let prv of provinsi">{{prv}}</option>
+              </select>
+            </form>
+          </td>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="kabKotaControl">
+                <option [value]="kbk" *ngFor="let kbk of kabKota">{{kbk}}</option>
+              </select>
+            </form>
+          </td>
 
-                      <td>
-                          <form [formGroup]="initForm">
-                              <select class="form-control" formControlName="kecamatanControl">
-                                <option [value]="kct" *ngFor="let kct of kecamatan">{{kct}}</option>
-                              </select>
-                            </form>
-                      </td>
-                      <td>{{rtrwn7}}</td>
-                      <td>{{rtrksn7}}</td>
-                      <td>{{rtrwpulau7}}</td>
-                      <td>{{rtrwprovinsi7}}</td>
-                      <td>{{rtrwkota7}}</td>
-                    </tr>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="kecamatanControl">
+                <option [value]="kct" *ngFor="let kct of kecamatan">{{kct}}</option>
+              </select>
+              <span>
+                  <button (click)="onSelected7()" class="btn btn-sm"> <i class="fa fa-search"></i></button>
+              </span>
+            </form>
+          </td>
+          <td>{{rtrwn7}}</td>
+          <td>{{rtrksn7}}</td>
+          <td>{{rtrwpulau7}}</td>
+          <td>{{rtrwprovinsi7}}</td>
+          <td>{{rtrwkota7}}</td>
+        </tr>
 
-                    <tr>
-                        <th scope="row">8</th>
-                        <td><input class="form-control" type="text"></td>
-                        <td>
-                          <form [formGroup]="initForm">
-                            <select class="form-control" formControlName="jpControl">
-                              <option [value]="jp" *ngFor="let jp of jenisProgram">{{jp}}</option>
-                            </select>
-                          </form>
-                        </td>
-                        <td>
-                          <form [formGroup]="initForm">
-                            <select class="form-control" formControlName="provinsiControl">
-                              <option [value]="prv" *ngFor="let prv of provinsi">{{prv}}</option>
-                            </select>
-                          </form>
-                        </td>
-                        <td>
-                          <form [formGroup]="initForm">
-                            <select class="form-control" formControlName="kabKotaControl">
-                              <option [value]="kbk" *ngFor="let kbk of kabKota">{{kbk}}</option>
-                            </select>
-                          </form>
-                        </td>
+        <tr>
+          <th scope="row">8</th>
+          <td><input class="form-control" type="text"></td>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="jpControl">
+                <option [value]="jp" *ngFor="let jp of jenisProgram">{{jp}}</option>
+              </select>
+            </form>
+          </td>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="provinsiControl">
+                <option [value]="prv" *ngFor="let prv of provinsi">{{prv}}</option>
+              </select>
+            </form>
+          </td>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="kabKotaControl">
+                <option [value]="kbk" *ngFor="let kbk of kabKota">{{kbk}}</option>
+              </select>
+            </form>
+          </td>
 
-                        <td>
-                            <form [formGroup]="initForm">
-                                <select class="form-control" formControlName="kecamatanControl">
-                                  <option [value]="kct" *ngFor="let kct of kecamatan">{{kct}}</option>
-                                </select>
-                              </form>
-                        </td>
-                        <td>{{rtrwn8}}</td>
-                        <td>{{rtrksn8}}</td>
-                        <td>{{rtrwpulau8}}</td>
-                        <td>{{rtrwprovinsi8}}</td>
-                        <td>{{rtrwkota8}}</td>
-                      </tr>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="kecamatanControl">
+                <option [value]="kct" *ngFor="let kct of kecamatan">{{kct}}</option>
+              </select>
+              <span>
+                  <button (click)="onSelected8()" class="btn btn-sm"> <i class="fa fa-search"></i></button>
+              </span>
+            </form>
+          </td>
+          <td>{{rtrwn8}}</td>
+          <td>{{rtrksn8}}</td>
+          <td>{{rtrwpulau8}}</td>
+          <td>{{rtrwprovinsi8}}</td>
+          <td>{{rtrwkota8}}</td>
+        </tr>
 
-                      <tr>
-                          <th scope="row">9</th>
-                          <td><input class="form-control" type="text"></td>
-                          <td>
-                            <form [formGroup]="initForm">
-                              <select class="form-control" formControlName="jpControl">
-                                <option [value]="jp" *ngFor="let jp of jenisProgram">{{jp}}</option>
-                              </select>
-                            </form>
-                          </td>
-                          <td>
-                            <form [formGroup]="initForm">
-                              <select class="form-control" formControlName="provinsiControl">
-                                <option [value]="prv" *ngFor="let prv of provinsi">{{prv}}</option>
-                              </select>
-                            </form>
-                          </td>
-                          <td>
-                            <form [formGroup]="initForm">
-                              <select class="form-control" formControlName="kabKotaControl">
-                                <option [value]="kbk" *ngFor="let kbk of kabKota">{{kbk}}</option>
-                              </select>
-                            </form>
-                          </td>
+        <tr>
+          <th scope="row">9</th>
+          <td><input class="form-control" type="text"></td>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="jpControl">
+                <option [value]="jp" *ngFor="let jp of jenisProgram">{{jp}}</option>
+              </select>
+            </form>
+          </td>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="provinsiControl">
+                <option [value]="prv" *ngFor="let prv of provinsi">{{prv}}</option>
+              </select>
+            </form>
+          </td>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="kabKotaControl">
+                <option [value]="kbk" *ngFor="let kbk of kabKota">{{kbk}}</option>
+              </select>
+            </form>
+          </td>
 
-                          <td>
-                              <form [formGroup]="initForm">
-                                  <select class="form-control" formControlName="kecamatanControl">
-                                    <option [value]="kct" *ngFor="let kct of kecamatan">{{kct}}</option>
-                                  </select>
-                                </form>
-                          </td>
-                          <td>{{rtrwn9}}</td>
-                          <td>{{rtrksn9}}</td>
-                          <td>{{rtrwpulau9}}</td>
-                          <td>{{rtrwprovinsi9}}</td>
-                          <td>{{rtrwkota9}}</td>
-                        </tr>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="kecamatanControl">
+                <option [value]="kct" *ngFor="let kct of kecamatan">{{kct}}</option>
+              </select>
+              <span>
+                  <button (click)="onSelected9()" class="btn btn-sm"> <i class="fa fa-search"></i></button>
+              </span>
+            </form>
+          </td>
+          <td>{{rtrwn9}}</td>
+          <td>{{rtrksn9}}</td>
+          <td>{{rtrwpulau9}}</td>
+          <td>{{rtrwprovinsi9}}</td>
+          <td>{{rtrwkota9}}</td>
+        </tr>
 
-                        <tr>
-                            <th scope="row">10</th>
-                            <td><input class="form-control" type="text"></td>
-                            <td>
-                              <form [formGroup]="initForm">
-                                <select class="form-control" formControlName="jpControl">
-                                  <option [value]="jp" *ngFor="let jp of jenisProgram">{{jp}}</option>
-                                </select>
-                              </form>
-                            </td>
-                            <td>
-                              <form [formGroup]="initForm">
-                                <select class="form-control" formControlName="provinsiControl">
-                                  <option [value]="prv" *ngFor="let prv of provinsi">{{prv}}</option>
-                                </select>
-                              </form>
-                            </td>
-                            <td>
-                              <form [formGroup]="initForm">
-                                <select class="form-control" formControlName="kabKotaControl">
-                                  <option [value]="kbk" *ngFor="let kbk of kabKota">{{kbk}}</option>
-                                </select>
-                              </form>
-                            </td>
+        <tr>
+          <th scope="row">10</th>
+          <td><input class="form-control" type="text"></td>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="jpControl">
+                <option [value]="jp" *ngFor="let jp of jenisProgram">{{jp}}</option>
+              </select>
+            </form>
+          </td>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="provinsiControl">
+                <option [value]="prv" *ngFor="let prv of provinsi">{{prv}}</option>
+              </select>
+            </form>
+          </td>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="kabKotaControl">
+                <option [value]="kbk" *ngFor="let kbk of kabKota">{{kbk}}</option>
+              </select>
+            </form>
+          </td>
 
-                            <td>
-                                <form [formGroup]="initForm">
-                                    <select class="form-control" formControlName="kecamatanControl">
-                                      <option [value]="kct" *ngFor="let kct of kecamatan">{{kct}}</option>
-                                    </select>
-                                  </form>
-                            </td>
-                            <td>{{rtrwn10}}</td>
-                            <td>{{rtrksn10}}</td>
-                            <td>{{rtrwpulau10}}</td>
-                            <td>{{rtrwprovinsi10}}</td>
-                            <td>{{rtrwkota10}}</td>
-                          </tr>
+          <td>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="kecamatanControl">
+                <option [value]="kct" *ngFor="let kct of kecamatan">{{kct}}</option>
+              </select>
+              <span>
+                  <button (click)="onSelected10()" class="btn btn-sm"> <i class="fa fa-search"></i></button>
+              </span>
+            </form>
+          </td>
+          <td>{{rtrwn10}}</td>
+          <td>{{rtrksn10}}</td>
+          <td>{{rtrwpulau10}}</td>
+          <td>{{rtrwprovinsi10}}</td>
+          <td>{{rtrwkota10}}</td>
+        </tr>
 
       </tbody>
     </table>
   </div>
   <div class="card-footer text-center">
-    <button type="button" (click)="onSelected()" class="btn-primary btn-md">Home</button>
+    <button type="button" (click)="onSelected()" class="btn-primary btn-md">Check</button>
   </div>
 </div>
