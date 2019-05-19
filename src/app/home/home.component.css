@@ -1,0 +1,14 @@
+div {
+  background-image: url("/src/assets/PROPER2.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 100% 1000px;
+  /* background-attachment: fixed; */
+}
+
+.btn-xl {
+  padding: 10px 15px;
+  font-size: 30px;
+  border-radius: 10px;
+  width:14%;
+}
