@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { TableComponent } from './table/table.component';
+import { App } from './app.routing.ts/app.routing.ts.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { TableComponent } from './table/table.component';
     TableComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    App.Routing.TsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
