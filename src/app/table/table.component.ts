@@ -114,6 +114,32 @@ export class TableComponent implements OnInit {
   selectedJenisProgram;
   selectedKecamatan;
 
+  selectedJenisProgram2;
+  selectedKecamatan2;
+
+  selectedJenisProgram3;
+  selectedKecamatan3;
+
+  selectedJenisProgram4;
+  selectedKecamatan4;
+
+  selectedJenisProgram5;
+  selectedKecamatan5;
+
+  selectedJenisProgram6;
+  selectedKecamatan6;
+
+  selectedJenisProgram7;
+  selectedKecamatan7;
+
+  selectedJenisProgram8;
+  selectedKecamatan8;
+
+  selectedJenisProgram9;
+  selectedKecamatan9;
+
+  selectedJenisProgram10;
+  selectedKecamatan10;
 
   constructor(private fb: FormBuilder) {}
 
@@ -124,6 +150,24 @@ export class TableComponent implements OnInit {
       provinsiControl: '',
       kabKotaControl: '',
       kecamatanControl: '',
+      jpControl2: '',
+      jpControl3: '',
+      jpControl4: '',
+      jpControl5: '',
+      jpControl6: '',
+      jpControl7: '',
+      jpControl8: '',
+      jpControl9: '',
+      jpControl10: '',
+      kecamatanControl2: '',
+      kecamatanControl3: '',
+      kecamatanControl4: '',
+      kecamatanControl5: '',
+      kecamatanControl6: '',
+      kecamatanControl7: '',
+      kecamatanControl8: '',
+      kecamatanControl9: '',
+      kecamatanControl10: '',
     });
 
 
@@ -133,6 +177,33 @@ export class TableComponent implements OnInit {
     onSelected() {
       this.selectedJenisProgram = this.initForm.value['jpControl'];
       this.selectedKecamatan = this.initForm.value['kecamatanControl'];
+
+      this.selectedJenisProgram2 = this.initForm.value['jpControl2'];
+      this.selectedKecamatan2 = this.initForm.value['kecamatanControl2'];
+
+      this.selectedJenisProgram3 = this.initForm.value['jpControl3'];
+      this.selectedKecamatan3 = this.initForm.value['kecamatanControl3'];
+
+      this.selectedJenisProgram4 = this.initForm.value['jpControl4'];
+      this.selectedKecamatan4 = this.initForm.value['kecamatanControl4'];
+
+      this.selectedJenisProgram5 = this.initForm.value['jpControl5'];
+      this.selectedKecamatan5 = this.initForm.value['kecamatanControl5'];
+
+      this.selectedJenisProgram6 = this.initForm.value['jpControl6'];
+      this.selectedKecamatan6 = this.initForm.value['kecamatanControl6'];
+
+      this.selectedJenisProgram7 = this.initForm.value['jpControl7'];
+      this.selectedKecamatan7 = this.initForm.value['kecamatanControl7'];
+
+      this.selectedJenisProgram8 = this.initForm.value['jpControl8'];
+      this.selectedKecamatan8 = this.initForm.value['kecamatanControl8'];
+
+      this.selectedJenisProgram9 = this.initForm.value['jpControl9'];
+      this.selectedKecamatan9 = this.initForm.value['kecamatanControl9'];
+
+      this.selectedJenisProgram10 = this.initForm.value['jpControl10'];
+      this.selectedKecamatan10 = this.initForm.value['kecamatanControl10'];
 
       if (this.selectedJenisProgram === 'Jalan' && this.selectedKecamatan === 'Abepura') {
         this.rtrwn = '-';
