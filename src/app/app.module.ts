@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { TableComponent } from './table/table.component';
 // import appRoutes from './router-config';
 import { HomeComponent } from './home/home.component';
+import { ReactiveFormsModule } from '@angular/forms';
 // import { AppRoutingModule } from './router-config';
 
 
@@ -19,6 +20,7 @@ import { HomeComponent } from './home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

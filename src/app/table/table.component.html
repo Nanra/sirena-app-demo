@@ -23,24 +23,42 @@
       <tbody>
         <tr *ngFor="let number of numbers">
           <th scope="row">{{number}}</th>
-          <td><input type="text"></td>
+          <td><input class="form-control" type="text"></td>
           <td>
-            <select #actions name="usersearchactions" id="usersearchactions" title="Actions">
-              <option *ngFor="let jp of jenisProgram" [value]="jp">{{jp}}</option>
-            </select>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="jpControl">
+                <option [value]="jp" *ngFor="let jp of jenisProgram">{{jp}}</option>
+              </select>
+            </form>
           </td>
           <td>
-              <select #actions name="usersearchactions" id="usersearchactions" title="Actions">
-                  <option *ngFor="let prv of provinsi" [value]="prv">{{prv}}</option>
-                </select>
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="provinsiControl">
+                <option [value]="prv" *ngFor="let prv of provinsi">{{prv}}</option>
+              </select>
+            </form>
           </td>
-          <td>Otto</td>
-          <td>@mdo</td>
-          <td>-</td>
-          <td>-</td>
-          <td>-</td>
-          <td>-</td>
-          <td>-</td>
+          <td>
+
+            <form [formGroup]="initForm">
+              <select class="form-control" formControlName="kabKotaControl">
+                <option [value]="kbk" *ngFor="let kbk of kabKota">{{kbk}}</option>
+              </select>
+            </form>
+          </td>
+
+          <td>
+              <form [formGroup]="initForm">
+                  <select class="form-control" formControlName="kecamatanControl">
+                    <option [value]="kct" *ngFor="let kct of kecamatan">{{kct}}</option>
+                  </select>
+                </form>
+          </td>
+          <td>{{rtrwn}}</td>
+          <td>{{rtrksn}}</td>
+          <td>{{rtrwpulau}}</td>
+          <td>{{rtrwprovinsi}}</td>
+          <td>{{rtrwkota}}</td>
         </tr>
       </tbody>
     </table>
