@@ -51,13 +51,68 @@ export class TableComponent implements OnInit {
   initForm: FormGroup;
   provinsiForm: FormGroup;
 
-  rtrwn;
-  rtrksn;
-  rtrwpulau;
-  rtrwprovinsi;
-  rtrwkota;
+  rtrwn = '-';
+  rtrksn = '-';
+  rtrwpulau = '-';
+  rtrwprovinsi = '-';
+  rtrwkota = '-';
+
+  rtrwn2 = '-';
+  rtrksn2 = '-';
+  rtrwpulau2 = '-';
+  rtrwprovinsi2 = '-';
+  rtrwkota2 = '-';
+
+  rtrwn3 = '-';
+  rtrksn3 = '-';
+  rtrwpulau3 = '-';
+  rtrwprovinsi3 = '-';
+  rtrwkota3 = '-';
+
+  rtrwn4 = '-';
+  rtrksn4 = '-';
+  rtrwpulau4 = '-';
+  rtrwprovinsi4 = '-';
+  rtrwkota4 = '-';
+
+  rtrwn5 = '-';
+  rtrksn5 = '-';
+  rtrwpulau5 = '-';
+  rtrwprovinsi5 = '-';
+  rtrwkota5 = '-';
+
+  rtrwn6 = '-';
+  rtrksn6 = '-';
+  rtrwpulau6 = '-';
+  rtrwprovinsi6 = '-';
+  rtrwkota6 = '-';
+
+  rtrwn7 = '-';
+  rtrksn7 = '-';
+  rtrwpulau7 = '-';
+  rtrwprovinsi7 = '-';
+  rtrwkota7 = '-';
+
+  rtrwn8 = '-';
+  rtrksn8 = '-';
+  rtrwpulau8 = '-';
+  rtrwprovinsi8 = '-';
+  rtrwkota8 = '-';
+
+  rtrwn9 = '-';
+  rtrksn9 = '-';
+  rtrwpulau9 = '-';
+  rtrwprovinsi9 = '-';
+  rtrwkota9 = '-';
+
+  rtrwn10 = '-';
+  rtrksn10 = '-';
+  rtrwpulau10 = '-';
+  rtrwprovinsi10 = '-';
+  rtrwkota10 = '-';
 
   selectedJenisProgram;
+  selectedKecamatan;
 
 
   constructor(private fb: FormBuilder) {}
@@ -76,8 +131,53 @@ export class TableComponent implements OnInit {
     }
 
     onSelected() {
-      console.log('Isi Program');
+      this.selectedJenisProgram = this.initForm.value['jpControl'];
+      this.selectedKecamatan = this.initForm.value['kecamatanControl'];
+
+      if (this.selectedJenisProgram === 'Jalan' && this.selectedKecamatan === 'Abepura') {
+        this.rtrwn = '-';
+        this.rtrksn = 'Ada';
+        this.rtrwpulau = 'Ada';
+        this.rtrwprovinsi = 'Ada';
+        this.rtrwkota = 'Ada';
+
+      } else if (this.selectedJenisProgram === 'Jalan' && this.selectedKecamatan === 'Heram') {
+        this.rtrwn = '-';
+        this.rtrksn = '-';
+        this.rtrwpulau = 'Ada';
+        this.rtrwprovinsi = 'Ada';
+        this.rtrwkota = 'Ada';
+
+      } else if (this.selectedJenisProgram === 'Jalan' && this.selectedKecamatan === 'Jayapura Selatan') {
+        this.rtrwn = '-';
+        this.rtrksn = 'Ada';
+        this.rtrwpulau = 'Ada';
+        this.rtrwprovinsi = 'Ada';
+        this.rtrwkota = 'Ada';
+
+      } else if (this.selectedJenisProgram === 'Jalan' && this.selectedKecamatan === 'Jayapura Utara') {
+        this.rtrwn = '-';
+        this.rtrksn = 'Ada';
+        this.rtrwpulau = 'Ada';
+        this.rtrwprovinsi = 'Ada';
+        this.rtrwkota = '-';
+
+      } else if (this.selectedJenisProgram === 'Jalan' && this.selectedKecamatan === 'Muara Tami') {
+        this.rtrwn = '-';
+        this.rtrksn = 'Ada';
+        this.rtrwpulau = 'Ada';
+        this.rtrwprovinsi = 'Ada';
+        this.rtrwkota = 'Ada';
+      } else {
+        this.rtrwn = '-';
+        this.rtrksn = '-';
+        this.rtrwpulau = '-';
+        this.rtrwprovinsi = '-';
+        this.rtrwkota = '-';
+      }
       console.log(this.selectedJenisProgram);
+      console.log(this.selectedKecamatan);
+
     }
 
 }
